@@ -53,7 +53,7 @@ async def post_story(request: PostStoryRequest) -> StoryResponse:
 
 @story_router.put("/api/story",
                   response_model=StoryResponse,
-                  description="스토리 등록", )
+                  description="스토리 수정", )
 async def edit_story(request: EditStoryRequest) -> StoryResponse:
     mock_story = StoryResponse(
         diary_story_id=request.diary_story_id,
