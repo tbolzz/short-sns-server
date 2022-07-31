@@ -16,6 +16,24 @@ fake_users_db = {
     }
 }
 
+fake_users_db2 = {
+    "naru": {
+        "username": "naru",
+        "full_name": "CHOI naru",
+        "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW",
+        "disabled": False
+    }
+}
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    username: Union[str, None] = None
+
 
 class User(BaseModel):
     username: str
